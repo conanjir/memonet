@@ -1,0 +1,156 @@
+/* Info box styles */
+#info-box {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font: 14px 'Xanh Mono', sans-serif;
+  color: #000000;
+  z-index: 1000;
+}
+
+/* General styles for leaderboards */
+#leaderboard-size, #leaderboard-links {
+  position: absolute;
+  top: 10px;
+  width: 200px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font: 14px 'Xanh Mono', sans-serif;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+#leaderboard-size { 
+  right: 220px; 
+  max-height: 400px; /* Limit height for top 10 entries */
+}
+#leaderboard-links { 
+  right: 10px; 
+  top: 420px; /* Adjust position to avoid overlap */
+  max-height: 400px; /* Limit height for top 10 entries */
+}
+
+#leaderboard-size h3, #leaderboard-links h3 {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+#leaderboard-size ul, #leaderboard-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#leaderboard-size li, #leaderboard-links li {
+  margin: 5px 0;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #111;
+  font-family: 'Xanh Mono', sans-serif;
+}
+
+#connect, #debug-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  padding: 10px;
+  font-size: 14px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#debug-menu {
+  top: auto;
+  bottom: 10px;
+  width: 250px;
+  font-size: 14px;
+  font-family: 'Xanh Mono', sans-serif;
+}
+
+#debug-menu h3 {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+#debug-menu label {
+  display: block;
+  margin: 5px 0;
+}
+
+#debug-menu input[type="range"] {
+  width: 100%;
+}
+
+#debug-menu span {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#debug-menu #warning {
+  color: #faa;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+#warning {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  color: #faa;
+  font-family: sans-serif;
+}
+
+#distance-label, #distance, #distanceValue {
+  position: static;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+#distanceValue {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+svg {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.link {
+  stroke: #bdbdbd;
+}
+
+.node text {
+  fill: #fff;
+  font: 10px 'Xanh Mono', sans-serif;
+  pointer-events: none;
+}
+
+#info-box, #last-node-info, #leaderboard-size, #leaderboard-links, #debug-menu {
+  background: rgba(0, 0, 0, 0.8); /* Transparent black background */
+  color: #ffffff; /* White text */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
